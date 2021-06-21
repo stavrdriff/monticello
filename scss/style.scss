@@ -44,13 +44,23 @@ $OS: "Open Sans", sans-serif;
    margin: 0;
    line-height: 0.8;
 }
-%before {
+%beforeDark {
    &::before {
       content: "";
       display: block;
       width: 100px;
       height: 1px;
       background: #2c4058;
+      margin: 0 auto 40px;
+   }
+}
+%beforeLight {
+   &::before {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 1px;
+      background: #fff;
       margin: 0 auto 40px;
    }
 }
@@ -77,7 +87,7 @@ body {
 }
 .header {
    width: 100%;
-   padding: 53px 20px;
+   padding: 53px 0;
    background: rgba(106, 137, 255, 0.7);
    position: fixed;
    top: 0;
@@ -85,6 +95,7 @@ body {
    z-index: 100;
    // display: none;
    &__wrap {
+      padding: 0 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -142,6 +153,7 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   margin-right: -10px;
    &__a {
       margin: 10px;
       width: 40px;
@@ -286,9 +298,9 @@ body {
       font-weight: 700;
       margin-top: 17px;
    }
-   &__h2_before {
+   &__h2_beforeDark {
       margin-bottom: 100px;
-      @extend %before;
+      @extend %beforeDark;
       text-align: center;
       animation: pulse 5s infinite;
    }
@@ -355,11 +367,41 @@ body {
    }
 }
 .btn {
+   display: inline-block;
    padding: 19px 40px;
    border: 1px solid #2c4058;
    text-transform: uppercase;
    font-family: $Gbook;
    text-decoration: none;
    color: #2c4058;
-   line-height: 3.3;
+   transition: 0.5s;
+   &:hover {
+      transform: scale(1.1);
+      text-shadow: 0 0 0.5em #2c4058;
+      box-shadow: 0 0 0.5em #2c4058;
+   }
+}
+.news {
+   width: 100%;
+   padding: 140px 0;
+   background: url(../img/news_bg.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   &__h2 {
+      @extend %h2;
+      text-align: left;
+      font-weight: 700;
+      margin-top: 17px;
+      color: #fff;
+   }
+   &__h2_beforeLight {
+      margin-bottom: 100px;
+      @extend %beforeLight;
+      text-align: center;
+      animation: pulse 5s infinite;
+   }
+   &__slider {
+      margin-top: 100px;
+   }
 }

@@ -23,7 +23,7 @@
   font-weight: 400;
 }
 
-.projects__h2 {
+.projects__h2, .news__h2 {
   font-family: "Gotham", sans-serif;
   font-size: 2.45em;
   text-transform: uppercase;
@@ -39,12 +39,21 @@
   line-height: 0.8;
 }
 
-.projects__h2_before::before {
+.projects__h2_beforeDark::before {
   content: "";
   display: block;
   width: 100px;
   height: 1px;
   background: #2c4058;
+  margin: 0 auto 40px;
+}
+
+.news__h2_beforeLight::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: #fff;
   margin: 0 auto 40px;
 }
 
@@ -75,7 +84,7 @@ body {
 
 .header {
   width: 100%;
-  padding: 53px 20px;
+  padding: 53px 0;
   background: rgba(106, 137, 255, 0.7);
   position: fixed;
   top: 0;
@@ -84,6 +93,7 @@ body {
 }
 
 .header__wrap {
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,6 +185,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: -10px;
 }
 
 .socials__a {
@@ -370,7 +381,7 @@ body {
   margin-top: 17px;
 }
 
-.projects__h2_before {
+.projects__h2_beforeDark {
   margin-bottom: 100px;
   text-align: center;
   -webkit-animation: pulse 5s infinite;
@@ -451,12 +462,49 @@ body {
 }
 
 .btn {
+  display: inline-block;
   padding: 19px 40px;
   border: 1px solid #2c4058;
   text-transform: uppercase;
   font-family: "GothamBook", sans-serif;
   text-decoration: none;
   color: #2c4058;
-  line-height: 3.3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  text-shadow: 0 0 0.5em #2c4058;
+  -webkit-box-shadow: 0 0 0.5em #2c4058;
+          box-shadow: 0 0 0.5em #2c4058;
+}
+
+.news {
+  width: 100%;
+  padding: 140px 0;
+  background: url(../img/news_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.news__h2 {
+  text-align: left;
+  font-weight: 700;
+  margin-top: 17px;
+  color: #fff;
+}
+
+.news__h2_beforeLight {
+  margin-bottom: 100px;
+  text-align: center;
+  -webkit-animation: pulse 5s infinite;
+          animation: pulse 5s infinite;
+}
+
+.news__slider {
+  margin-top: 100px;
 }
 /*# sourceMappingURL=style.css.map */
