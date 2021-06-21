@@ -101,6 +101,21 @@ body {
           align-items: center;
   margin: 0 10px;
   white-space: nowrap;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav__a:hover {
+  text-shadow: 0 0 0.5em #fff;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.nav__a:hover .nav__circle {
+  -webkit-box-shadow: 0 0 0.5em #fff;
+          box-shadow: 0 0 0.5em #fff;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .nav__circle {
@@ -109,6 +124,8 @@ body {
   border-radius: 50%;
   border: 1px solid #fff;
   margin-right: 14px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .nav__circle_active {
@@ -144,6 +161,16 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.socials__a:hover {
+  text-shadow: 0 0 0.5em #fff;
+  -webkit-box-shadow: 0 0 0.5em #fff;
+          box-shadow: 0 0 0.5em #fff;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .about {
@@ -198,6 +225,31 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.about__scrollDown {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  margin-left: -20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about__scrollDown:hover {
+  text-shadow: 0 0 0.5em #fff;
+  -webkit-box-shadow: 0 0 0.5em #fff;
+          box-shadow: 0 0 0.5em #fff;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
 }
 
 .slick-prev,
