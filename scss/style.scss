@@ -35,12 +35,14 @@ $OS: "Open Sans", sans-serif;
    font-size: 2.45em;
    text-transform: uppercase;
    margin: 0;
+   line-height: 0.8;
 }
 %h3 {
-   font-family: $G;
+   font-family: $Gbook;
    font-size: 1.22em;
    text-transform: uppercase;
    margin: 0;
+   line-height: 0.8;
 }
 %before {
    &::before {
@@ -70,7 +72,7 @@ body {
    color: #2c4058;
 }
 .container {
-   max-width: 1180px;
+   max-width: 1210px;
    margin: 0 auto;
 }
 .header {
@@ -187,17 +189,6 @@ body {
       line-height: 0.8;
       margin-bottom: 40px;
       animation: pulse 5s infinite;
-      @keyframes pulse {
-         0% {
-            text-shadow: 0 0 0 #fff;
-         }
-         50% {
-            text-shadow: 0 0 0.5em #2c4058, 0 0 0.2em #2c4058;
-         }
-         100% {
-            text-shadow: 0 0 0 #fff;
-         }
-      }
    }
    &__p {
       margin: 0;
@@ -236,6 +227,17 @@ body {
          box-shadow: 0 0 0.5em #fff;
          transform: translateY(-7px);
       }
+   }
+}
+@keyframes pulse {
+   0% {
+      text-shadow: 0 0 0 #fff;
+   }
+   50% {
+      text-shadow: 0 0 0.5em #2c4058, 0 0 0.2em #2c4058;
+   }
+   100% {
+      text-shadow: 0 0 0 #fff;
    }
 }
 .slick-prev,
@@ -282,18 +284,20 @@ body {
       @extend %h2;
       text-align: left;
       font-weight: 700;
+      margin-top: 17px;
    }
    &__h2_before {
       margin-bottom: 100px;
       @extend %before;
       text-align: center;
+      animation: pulse 5s infinite;
    }
    &__h3 {
       @extend %h3;
    }
    &__p {
       @extend %p;
-      margin: 40px 0;
+      padding: 40px 0;
    }
    &__wrapper {
       width: 100%;
@@ -325,6 +329,7 @@ body {
    }
    &__imgs {
       width: 54%;
+      max-height: 470px;
       overflow: hidden;
    }
    &__img {
@@ -335,6 +340,26 @@ body {
    }
    &__text {
       width: 50%;
-      padding: 60px 70px;
+      padding: 60px 0;
+      &_right {
+         padding-left: 70px;
+      }
+      &_left {
+         padding-right: 70px;
+      }
    }
+   &__location {
+      font-family: $OS;
+      font-style: italic;
+      margin-top: 60px;
+   }
+}
+.btn {
+   padding: 19px 40px;
+   border: 1px solid #2c4058;
+   text-transform: uppercase;
+   font-family: $Gbook;
+   text-decoration: none;
+   color: #2c4058;
+   line-height: 3.3;
 }
