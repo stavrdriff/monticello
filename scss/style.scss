@@ -33,19 +33,18 @@ $OS: "Open Sans", sans-serif;
 %h2 {
    font-family: $G;
    font-size: 2.45em;
-   line-height: 0.5;
    text-align: center;
    text-transform: uppercase;
    margin: 0;
 }
 %before {
-   ::before {
+   &::before {
       content: "";
       display: block;
       width: 100px;
       height: 1px;
       background: #2c4058;
-      margin-bottom: 40px;
+      margin: 0 auto 40px;
    }
 }
 %p {
@@ -181,14 +180,25 @@ body {
       text-indent: 0.05em;
       line-height: 0.8;
       margin-bottom: 40px;
-      text-shadow: 0 0 0.02em #2c4058;
+      animation: pulse 5s infinite;
+      @keyframes pulse {
+         0% {
+            text-shadow: 0 0 0 #fff;
+         }
+         50% {
+            text-shadow: 0 0 0.5em #2c4058, 0 0 0.2em #2c4058;
+         }
+         100% {
+            text-shadow: 0 0 0 #fff;
+         }
+      }
    }
    &__p {
       margin: 0;
       letter-spacing: 0.3em;
       text-indent: 0.3em;
       line-height: 1.22;
-      text-shadow: 0 0 0.5em #2c4058, 0 0 0.2em #2c4058;
+      animation: pulse 5s infinite;
    }
    &__imgs {
       width: 100%;
@@ -258,4 +268,12 @@ body {
    height: 9px;
    border-radius: 50%;
    background: #fff;
+}
+.projects {
+   width: 100%;
+   padding: 100px 0 140px;
+   &__h2 {
+      @extend %h2;
+      @extend %before;
+   }
 }
