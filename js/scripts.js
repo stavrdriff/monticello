@@ -17,7 +17,9 @@ $(document).ready(function () {
       autoplay: true,
       loop: true,
       mergeFit: false,
-
+      slideBy: 3,
+      autoplaySpeed: 1000,
+      autoplayTimeout: 6000,
       dots: true,
       margin: 30,
       responsiveClass: true,
