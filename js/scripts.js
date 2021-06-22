@@ -44,12 +44,14 @@ $(document).ready(function () {
 function initMap() {
    const uluru = { lat: 47.064778427055074, lng: 37.47879117489533 };
    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 15,
+      zoom: 12,
       center: uluru,
    });
    const marker = new google.maps.Marker({
       position: new google.maps.LatLng(47.06719737730901, 37.478254733129816),
       icon: "img/marker_maps.png",
+      // iconSize: [40, 40],
+      // iconAnchor: [20, 40],
       map: map,
    });
 }

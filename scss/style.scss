@@ -434,6 +434,7 @@ body {
       text-transform: uppercase;
       font-size: 1.22em;
       line-height: 1.545;
+      min-height: 2.8em;
    }
    &__p {
       margin: 5px 20px 0;
@@ -568,7 +569,52 @@ button.owl-next {
       object-position: center;
    }
 }
-
 .map {
    height: 70vh;
+}
+.footer {
+   width: 100%;
+   height: 50vh;
+   background: linear-gradient(45deg, #55b7ff, #7e5aff);
+   &__bg {
+      width: 100%;
+      height: 100%;
+      background: url(../img/footer_bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   &__container {
+      margin: -10% auto 0;
+      width: 90%;
+      max-width: 810px;
+      padding: 0 20px;
+      text-align: center;
+   }
+   &__wrap {
+      margin-top: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__copyrights {
+      display: flex;
+      margin-top: 40px;
+   }
+   &__delimiter {
+      width: 1px;
+      background: #fff;
+      margin: 0 20px;
+   }
+   &__p {
+      margin: 0;
+      font-family: $Gbook;
+      font-size: 0.78em;
+      line-height: 1.57;
+      color: #fff;
+   }
 }
