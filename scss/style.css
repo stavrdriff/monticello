@@ -620,12 +620,12 @@ button.owl-next {
 }
 
 .owl-prev {
-  top: -300px;
+  top: -280px;
   left: -10%;
 }
 
 .owl-next {
-  top: -300px;
+  top: -280px;
   right: -10%;
 }
 
@@ -636,5 +636,32 @@ button.owl-next {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.owl-item {
+  background: transparent !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.owl-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid #fff !important;
+  margin: 0 20px;
+}
+
+.owl-dot.active {
+  background: #fff !important;
 }
 /*# sourceMappingURL=style.css.map */

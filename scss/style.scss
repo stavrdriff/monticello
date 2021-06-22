@@ -471,9 +471,7 @@ body {
       margin: 0;
    }
 }
-// .owl-carousel .owl-item img {
-//    height: 100%;
-// }
+
 .owl-nav {
    position: relative;
 }
@@ -494,14 +492,33 @@ button.owl-next {
    justify-content: center;
 }
 .owl-prev {
-   top: -300px;
+   top: -280px;
    left: -10%;
 }
 .owl-next {
-   top: -300px;
+   top: -280px;
    right: -10%;
 }
 .owlSlider__item {
    display: flex;
    justify-content: center;
+}
+.owl-item {
+   background: transparent !important;
+   display: flex;
+   justify-content: center;
+}
+.owl-dots {
+   text-align: center;
+   margin-top: 60px;
+}
+.owl-dot {
+   width: 9px;
+   height: 9px;
+   border-radius: 50%;
+   border: 1px solid #fff !important;
+   margin: 0 20px;
+}
+.owl-dot.active {
+   background: #fff !important;
 }

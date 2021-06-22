@@ -14,23 +14,26 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
    $('.owl-carousel').owlCarousel({
+      autoplay: true,
       loop: true,
+      mergeFit: false,
+
       dots: true,
-      margin: 10,
+      margin: 30,
       responsiveClass: true,
       responsive: {
          0: {
             items: 1,
-            nav: true
-         },
-         600: {
-            items: 3,
             nav: false
          },
-         1000: {
+         680: {
+            items: 2,
+         },
+         1024: {
             items: 3,
+         },
+         1430: {
             nav: true,
-
          }
       }
    })
