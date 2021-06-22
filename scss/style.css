@@ -724,4 +724,8 @@ button.owl-next {
   -o-object-position: center;
      object-position: center;
 }
+
+.map {
+  height: 70vh;
+}
 /*# sourceMappingURL=style.css.map */

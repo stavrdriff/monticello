@@ -40,3 +40,12 @@ $(document).ready(function () {
       }
    })
 });
+
+let map;
+
+function initMap() {
+   map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 47.06719737730901, lng: 37.478254733129816 },
+      zoom: 12,
+   });
+}
