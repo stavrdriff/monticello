@@ -23,7 +23,7 @@
   font-weight: 400;
 }
 
-.projects__h2, .news__h2, .gallery__h2 {
+.projects__h2, .news__h2, .gallery__h2, .modal__h2 {
   font-family: "Gotham", sans-serif;
   font-size: 2.45em;
   text-transform: uppercase;
@@ -89,7 +89,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .header__wrap {
@@ -376,7 +376,6 @@ body {
 }
 
 .projects__h2 {
-  text-align: left;
   font-weight: 700;
   margin-top: 17px;
 }
@@ -674,7 +673,6 @@ button.owl-next {
 }
 
 .gallery__h2 {
-  text-align: left;
   font-weight: 700;
   margin-top: 17px;
 }
@@ -691,10 +689,32 @@ button.owl-next {
   text-transform: uppercase;
 }
 
+@media (max-width: 500px) {
+  .gallery__cities {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .gallery__city {
   text-decoration: none;
   color: #2c4058;
   margin: 0 30px;
+}
+
+@media (max-width: 500px) {
+  .gallery__city {
+    display: inline-block;
+    margin: 15px;
+  }
 }
 
 .gallery__content {
@@ -705,6 +725,13 @@ button.owl-next {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   margin-bottom: 60px;
+}
+
+@media (max-width: 500px) {
+  .gallery__content {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .gallery__item {
@@ -774,6 +801,8 @@ button.owl-next {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer__copyrights {
@@ -795,5 +824,161 @@ button.owl-next {
   font-size: 0.78em;
   line-height: 1.57;
   color: #fff;
+}
+
+.modal {
+  position: fixed;
+  bottom: 25vh;
+  left: 50%;
+  margin-left: -385px;
+  width: 770px;
+  height: 450px;
+  background: #fff;
+  z-index: 1000;
+}
+
+@media (max-width: 770px) {
+  .modal {
+    width: 100%;
+    height: unset;
+    margin: 0;
+    left: 0;
+    padding: 10px;
+  }
+}
+
+.modal__bg {
+  padding: 60px 60px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: url(../img/modal_bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.modal__h2 {
+  font-weight: 400;
+}
+
+.modal__h2_beforeDark {
+  text-align: center;
+}
+
+.modal__h2_beforeDark::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: #2c4058;
+  margin: 0 auto 30px;
+}
+
+.modal__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal__content {
+  width: 50%;
+  min-width: 300px;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 770px) {
+  .modal__content:first-child {
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+}
+
+.modal__p, .modal__a {
+  font-family: "GothamBook", sans-serif;
+  text-decoration: none;
+  color: #2c4058;
+  margin: 20px 0;
+}
+
+.modal__p span {
+  margin-right: 10px;
+  color: #7e5aff;
+}
+
+.modal__p:last-child {
+  margin-bottom: 0;
+}
+
+.modal__p:first-child {
+  margin-top: 0;
+}
+
+.modal__btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.modal__input {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(75, 85, 98, 0.5);
+  outline: none;
+  padding: 20px 0;
+}
+
+.modal__input:first-child {
+  padding-top: 0;
+}
+
+.modal__input:focus {
+  border-bottom: 1px solid #2c4058;
+}
+
+.modal__input::-webkit-input-placeholder {
+  color: rgba(75, 85, 98, 0.5);
+}
+
+.modal__input:-ms-input-placeholder {
+  color: rgba(75, 85, 98, 0.5);
+}
+
+.modal__input::-ms-input-placeholder {
+  color: rgba(75, 85, 98, 0.5);
+}
+
+.modal__input::placeholder {
+  color: rgba(75, 85, 98, 0.5);
+}
+
+.modal__input::-webkit-input-placeholder:focus {
+  color: #2c4058;
+}
+
+.modal__input:-ms-input-placeholder:focus {
+  color: #2c4058;
+}
+
+.modal__input::-ms-input-placeholder:focus {
+  color: #2c4058;
+}
+
+.modal__input::placeholder:focus {
+  color: #2c4058;
 }
 /*# sourceMappingURL=style.css.map */

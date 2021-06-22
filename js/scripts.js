@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function () {
    $('.about__slider').slick({
       pauseOnFocus: false,
@@ -42,16 +44,18 @@ $(document).ready(function () {
 });
 
 function initMap() {
-   const uluru = { lat: 47.064778427055074, lng: 37.47879117489533 };
-   const map = new google.maps.Map(document.getElementById("map"), {
+   const map = L.map('map', {
+      center: [47.02787400626181, 37.481122419018796],
       zoom: 12,
-      center: uluru,
+      scrollWheelZoom: false
    });
-   const marker = new google.maps.Marker({
-      position: new google.maps.LatLng(47.06719737730901, 37.478254733129816),
-      icon: "img/marker_maps.png",
-      // iconSize: [40, 40],
-      // iconAnchor: [20, 40],
-      map: map,
+
+   let customIcon = L.icon({
+      iconUrl: 'img/marker_maps.png',
+      iconSize: [50, 50],
+      iconAnchor: [25, 25],
    });
+   L.marker([47.06731466591667, 37.47845833491723], { icon: customIcon }).addTo(map);
+   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
 }
+initMap();
