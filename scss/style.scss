@@ -411,6 +411,9 @@ body {
       max-width: 370px;
       min-height: 515px;
       background: #fff;
+      padding-bottom: 30px;
+      display: flex;
+      flex-direction: column;
    }
    &__imgs {
       position: relative;
@@ -426,22 +429,21 @@ body {
       object-fit: cover;
       object-position: center;
    }
-   &__text {
-      padding: 30px 22px;
-   }
    &__h4 {
-      margin: 0;
+      margin: 30px 20px 0;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 1.22em;
       line-height: 1.545;
    }
    &__p {
+      margin: 5px 20px 0;
       font-family: $OS;
       line-height: 1.67;
    }
    &__author {
       display: flex;
+      margin-left: 20px;
       margin-top: auto;
    }
    &__authorImgs {
@@ -477,23 +479,27 @@ body {
 }
 button.owl-prev,
 button.owl-next {
-   font-size: 3em !important;
+   font-size: 1.5em !important;
    border-radius: 50% !important;
+   border: 1px solid #fff !important;
    width: 48px;
    height: 48px;
-   background: rgb(255, 255, 255, 0.7) !important;
+
    padding: 0 !important;
    margin: 0 !important;
    position: absolute;
    color: #fff !important;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 .owl-prev {
-   top: -200px;
-   left: -50px;
+   top: -300px;
+   left: -10%;
 }
 .owl-next {
-   top: -130px;
-   right: 2%;
+   top: -300px;
+   right: -10%;
 }
 .owlSlider__item {
    display: flex;
