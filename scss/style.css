@@ -616,6 +616,12 @@ body {
   }
 }
 
+@media (max-height: 550px) {
+  .news__item {
+    min-height: unset;
+  }
+}
+
 .news__imgs {
   position: relative;
   padding-top: 60%;
@@ -752,7 +758,7 @@ button.owl-next {
   height: 9px;
   border-radius: 50%;
   border: 1px solid #fff !important;
-  margin: 0 20px;
+  margin: 10px 20px;
 }
 
 .owl-dot.active {
@@ -853,6 +859,12 @@ button.owl-next {
 
 .map {
   height: 70vh;
+}
+
+@media (max-width: 1023px) {
+  .map {
+    height: 50vh;
+  }
 }
 
 .footer {
