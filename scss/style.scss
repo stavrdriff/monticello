@@ -703,6 +703,7 @@ button.owl-next {
    height: 450px;
    background: #fff;
    z-index: 1000;
+   box-shadow: 0 0 1em rgba(44, 64, 88, 0.5);
    @media (max-width: 770px) {
       width: 100%;
       height: unset;
@@ -715,6 +716,9 @@ button.owl-next {
       bottom: 0;
       height: unset;
       padding: 10px;
+   }
+   &_active {
+      display: block;
    }
    &__bg {
       padding: 60px;
@@ -784,8 +788,9 @@ button.owl-next {
    &__p:first-child {
       margin-top: 0;
    }
-   &__btn {
-      align-self: flex-end;
+   &__btns {
+      display: flex;
+      justify-content: space-between;
    }
    &__input {
       border-radius: 0;

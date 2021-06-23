@@ -967,6 +967,8 @@ button.owl-next {
   height: 450px;
   background: #fff;
   z-index: 1000;
+  -webkit-box-shadow: 0 0 1em rgba(44, 64, 88, 0.5);
+          box-shadow: 0 0 1em rgba(44, 64, 88, 0.5);
 }
 
 @media (max-width: 770px) {
@@ -986,6 +988,10 @@ button.owl-next {
     height: unset;
     padding: 10px;
   }
+}
+
+.modal_active {
+  display: block;
 }
 
 .modal__bg {
@@ -1082,9 +1088,13 @@ button.owl-next {
   margin-top: 0;
 }
 
-.modal__btn {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+.modal__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal__input {

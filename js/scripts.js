@@ -134,3 +134,126 @@ function headerHidden() {
 }
 headerHidden();
 
+function modal() {
+   document.querySelector('.modal__btn_open').addEventListener('click', function (e) {
+      e.preventDefault()
+      document.querySelector('.modal').classList.toggle('modal_active')
+   })
+   document.querySelector('.modal__btn_close').addEventListener('click', function (e) {
+      e.preventDefault()
+      document.querySelector('.modal').classList.remove('modal_active')
+   })
+}
+modal();
+
+let newyork = [
+   {
+      src: 'img/newyork1.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/newyork2.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/newyork3.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/newyork4.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/newyork5.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+]
+let london = [
+   {
+      src: 'img/london1.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/london2.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/london3.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/london4.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/london5.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+]
+let singapore = [
+   {
+      src: 'img/singapore1.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/singapore2.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/singapore3.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/singapore4.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+   {
+      src: 'img/singapore5.jpg',
+      alt: 'TimSolo exam at beetroot.academy in HTML, CSS, JavaScript. Slick and OwlCarousel sliders, Maps.'
+   },
+]
+
+function addImgsGallery() {
+   for (let link of document.getElementsByClassName('gallery__city')) {
+      link.addEventListener('click', function (e) {
+         e.preventDefault();
+         filterCities(this.getAttribute('data-city'));
+      })
+   }
+}
+addImgsGallery();
+function filterCities(name) {
+   if (name == 'newyork') {
+      document.querySelector('.gallery__content').innerHTML = '';
+      let html = '';
+      for (let key of newyork) {
+         html = html +
+            `<div class="gallery__item">
+               <img src="${key.src}" alt="${key.alt}" class="gallery__img">
+            </div>`
+      }
+      document.querySelector('.gallery__content').innerHTML = html;
+   };
+   if (name == 'london') {
+      document.querySelector('.gallery__content').innerHTML = '';
+      let html = '';
+      for (let key of london) {
+         html = html +
+            `<div class="gallery__item">
+               <img src="${key.src}" alt="${key.alt}" class="gallery__img">
+            </div>`
+      }
+      document.querySelector('.gallery__content').innerHTML = html
+   };
+   if (name == 'singapore') {
+      document.querySelector('.gallery__content').innerHTML = '';
+      let html = '';
+      for (let key of singapore) {
+         html = html +
+            `<div class="gallery__item">
+               <img src="${key.src}" alt="${key.alt}" class="gallery__img">
+            </div>`
+      }
+      document.querySelector('.gallery__content').innerHTML = html
+   };
+};
