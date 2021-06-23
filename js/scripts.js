@@ -121,15 +121,16 @@ function aboutScrollDown() {
 aboutScrollDown();
 
 function headerHidden() {
-   let posWindow = []
-   window.addEventListener('scroll', function (e) {
+   let posWindow = 0;
+   window.addEventListener('scroll', function () {
       let pos = document.getElementById('about').getBoundingClientRect();
-      posWindow.push(pos.y)
-      if (posWindow[posWindow.length - 1] > posWindow[posWindow.length - 2]) {
+      let posWindow2 = pos.y;
+      if (posWindow < posWindow2) {
          document.querySelector('.header').classList.remove('hidden')
-      } else if (posWindow[posWindow.length - 1] < posWindow[posWindow.length - 2]) {
+      } else {
          document.querySelector('.header').classList.add('hidden')
       }
+      posWindow = posWindow2;
    })
 }
 headerHidden();
