@@ -1,5 +1,4 @@
 "use strict";
-
 $(document).ready(function () {
    $('.about__slider').slick({
       pauseOnFocus: false,
@@ -42,7 +41,6 @@ $(document).ready(function () {
       }
    })
 });
-
 function initMap() {
    const map = L.map('map', {
       center: [47.02787400626181, 37.481122419018796],
