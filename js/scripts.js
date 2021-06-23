@@ -54,7 +54,7 @@ function initMap() {
       iconAnchor: [25, 25],
    });
    L.marker([47.06731466591667, 37.47845833491723], { icon: customIcon }).addTo(map);
-   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
+   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 }
 initMap();
 
