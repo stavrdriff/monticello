@@ -82,7 +82,7 @@ function upWindow() {
 }
 upWindow();
 const headerHeight = document.getElementById('header').clientHeight;
-function headerActive() {
+function headerLinksActive() {
    for (let link of document.getElementsByClassName('nav__a')) {
       link.addEventListener('click', function (e) {
          e.preventDefault();
@@ -106,7 +106,7 @@ function headerActive() {
       })
    }
 }
-headerActive();
+headerLinksActive();
 
 function aboutScrollDown() {
    document.getElementById('about__scrollDown').addEventListener('click', function (e) {
