@@ -481,8 +481,10 @@
                </p>
             </div>
             <div class="modal__content">
-               <input class="modal__input" type="text" placeholder="Your Name">
-               <input class="modal__input" type="email" id="email" placeholder="E-mail">
+               <input class="modal__input" id="userName" type="text" placeholder="Your Name"
+                  onchange="enterUser('userName')">
+               <input class="modal__input" id="userMail" type="email" placeholder="E-mail"
+                  onchange="enterUser('userMail')">
                <div class="modal__btns">
                   <a href="#" class="btn modal__btn modal__btn_close">close</a>
                   <a href="#" class="btn modal__btn modal__btn_submit">submit</a>

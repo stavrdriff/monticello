@@ -257,3 +257,19 @@ function filterCities(name) {
       document.querySelector('.gallery__content').innerHTML = html
    };
 };
+let post = {
+   userName: '',
+   userMail: '',
+}
+function enterUser(empty) {
+   post[empty] = document.getElementById(empty).value;
+};
+function validUser() {
+   let digits = 0;
+   let letters = '';
+   let caps = '';
+};
+document.querySelector('.modal__btn_submit').addEventListener('click', function (e) {
+   e.preventDefault();
+   // console.log(post)
+})
