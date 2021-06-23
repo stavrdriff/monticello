@@ -57,3 +57,65 @@ function initMap() {
    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
 }
 initMap();
+
+const windowHeight = window.innerHeight;
+window.addEventListener('resize', function () {
+   windowHeight = window.innerHeight;
+})
+
+function upWindow() {
+   let upBtn = document.getElementById('up');
+   window.addEventListener('scroll', function () {
+      if (windowHeight < window.scrollY) {
+         upBtn.classList.add('up__active')
+      }
+      else {
+         upBtn.classList.remove('up__active')
+      }
+   })
+   upBtn.addEventListener('click', function () {
+      window.scrollTo({
+         top: 0,
+         behavior: "smooth"
+      })
+   })
+}
+upWindow();
+const headerHeight = document.getElementById('header').clientHeight;
+function headerActive() {
+   for (let link of document.getElementsByClassName('nav__a')) {
+      link.addEventListener('click', function (e) {
+         e.preventDefault();
+         let idSection = this.getAttribute('href');
+         window.scrollTo({
+            top: document.querySelector(idSection).offsetTop - headerHeight,
+            left: 0,
+            behavior: 'smooth',
+         })
+      })
+   }
+   for (let link of document.getElementsByClassName('nav__a')) {
+      let sectionId = link.getAttribute('href');
+      window.addEventListener('scroll', function (e) {
+         let pos = document.querySelector(sectionId).getBoundingClientRect();
+         if (pos.top < windowHeight / 2 && pos.top > - 1 * (pos.height - windowHeight / 2)) {
+            link.firstElementChild.classList.add('nav__circle_active')
+         } else {
+            link.firstElementChild.classList.remove('nav__circle_active')
+         }
+      })
+   }
+}
+headerActive();
+
+function aboutScrollDown() {
+   document.getElementById('about__scrollDown').addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+         top: document.getElementById('projects').offsetTop - headerHeight,
+         left: 0,
+         behavior: 'smooth',
+      })
+   })
+}
+aboutScrollDown();

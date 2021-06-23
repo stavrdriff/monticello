@@ -31,17 +31,17 @@
 </head>
 
 <body>
-   <header class="header">
+   <header class="header" id="header">
       <div class="container">
          <div class="header__wrap">
             <div class="logo"><a href="#">
                   <img src="img/Logo.png" alt="">
                </a>
             </div>
-            <div class="nav">
+            <nav class="nav">
                <ul class="nav__ul">
                   <li class="nav__li"><a href="#about" class="nav__a">
-                        <div class="nav__circle"></div>about us
+                        <div class="nav__circle nav__circle_active"></div>about us
                      </a></li>
                   <li class="nav__li"><a href="#projects" class="nav__a">
                         <div class="nav__circle"></div>projects
@@ -53,7 +53,7 @@
                         <div class="nav__circle"></div>contact
                      </a></li>
                </ul>
-            </div>
+            </nav>
             <div class="socials">
                <a href="" class="socials__a"><span class="icon-facebook"></span></a>
                <a href="" class="socials__a"><span class="icon-twitter"></span></a>
@@ -86,7 +86,8 @@
             <img class="about__img" src="img/main_bg5.png" alt="">
          </div>
       </div>
-      <a href="#projects" class="about__scrollDown"><span class="icon-keyboard_arrow_down"></span></a>
+      <a href="#projects" class="about__scrollDown" id="about__scrollDown"><span
+            class="icon-keyboard_arrow_down"></span></a>
    </section>
 
    <section id="projects" class="projects">
@@ -388,19 +389,19 @@
          </div>
          <div class="gallery__content">
             <div class="gallery__item">
-               <img src="img/gallery1.jpg" alt="" class="gallery__img">
+               <img src="img/newyork1.jpg" alt="" class="gallery__img">
             </div>
             <div class="gallery__item">
-               <img src="img/gallery2.jpg" alt="" class="gallery__img">
+               <img src="img/newyork2.jpg" alt="" class="gallery__img">
             </div>
             <div class="gallery__item">
-               <img src="img/gallery3.jpg" alt="" class="gallery__img">
+               <img src="img/newyork3.jpg" alt="" class="gallery__img">
             </div>
             <div class="gallery__item">
-               <img src="img/gallery4.jpg" alt="" class="gallery__img">
+               <img src="img/newyork4.jpg" alt="" class="gallery__img">
             </div>
             <div class="gallery__item">
-               <img src="img/gallery5.jpg" alt="" class="gallery__img">
+               <img src="img/newyork5.jpg" alt="" class="gallery__img">
             </div>
          </div>
          <a href="#" class="btn">see more</a>
@@ -454,6 +455,7 @@
          </div>
       </div>
    </div>
+   <button id="up" class="up">UP</button>
 
 
 
