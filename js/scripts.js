@@ -119,3 +119,18 @@ function aboutScrollDown() {
    })
 }
 aboutScrollDown();
+
+function headerHidden() {
+   let posWindow = []
+   window.addEventListener('scroll', function (e) {
+      let pos = document.getElementById('about').getBoundingClientRect();
+      posWindow.push(pos.y)
+      if (posWindow[posWindow.length - 1] > posWindow[posWindow.length - 2]) {
+         document.querySelector('.header').classList.remove('hidden')
+      } else if (posWindow[posWindow.length - 1] < posWindow[posWindow.length - 2]) {
+         document.querySelector('.header').classList.add('hidden')
+      }
+   })
+}
+headerHidden();
+

@@ -101,8 +101,9 @@ body {
    position: fixed;
    top: 0;
    left: 0;
-   z-index: 1000;
-   // display: none;
+   z-index: 10000;
+   transition: 1s;
+   transform: translateY(0%);
    &__wrap {
       padding: 0 20px;
       display: flex;
@@ -110,6 +111,9 @@ body {
       align-items: center;
       flex-wrap: wrap;
    }
+}
+.hidden {
+   transform: translateY(-100%);
 }
 .nav {
    width: 60%;
@@ -818,16 +822,17 @@ button.owl-next {
    right: 3vw;
    width: 70px;
    height: 50px;
-   background: #5c5c5c;
+   background: transparent;
    border-top-left-radius: 50%;
    border-bottom-right-radius: 50%;
    border-top-right-radius: 20%;
    border-bottom-left-radius: 20%;
-   color: #fff;
+   color: #666;
    font-size: 20px;
    font-family: "Open Sans", sans-serif;
    border: none;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
    outline: none;
    padding: 0;
    cursor: pointer;
