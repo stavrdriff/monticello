@@ -58,7 +58,7 @@ function initMap() {
 }
 initMap();
 
-const windowHeight = window.innerHeight;
+let windowHeight = window.innerHeight;
 window.addEventListener('resize', function () {
    windowHeight = window.innerHeight;
 })
