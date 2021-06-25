@@ -1176,7 +1176,7 @@ button.owl-next {
   outline: none;
   padding: 0;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .up__active {
